@@ -1,0 +1,31 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "NXCLang",
+  "patterns": [
+    {
+      "name": "keyword.control.nxc",
+      "match": "\\b(Press|Hold|HoldRelease|Wait|ImgCmp|ImgCmpRect|Loop|Snipping|Break|Continue|Notification|LineNotify|LineNotifyWithImage|Amiibo|Rumble|Count|Func|Exec|CallCsx|Keyboard|Print|Stop)\\b"
+    },
+    {
+      "name": "variable.parameter.nxc",
+      "match": "\\b(A|B|X|Y|L|ZL|R|ZR|START|SELECT|HOME|CAPTURE|UP|DOWN|LEFT|RIGHT|UPRIGHT|UPLEFT|DOWNRIGHT|DOWNLEFT|UP_L|DOWN_L|LEFT_L|RIGHT_L|UPRIGHT_L|UPLEFT_L|DOWNRIGHT_L|DOWNLEFT_L|CLICK_L|UP_R|DOWN_R|LEFT_R|RIGHT_R|UPRIGHT_R|UPLEFT_R|DOWNRIGHT_R|DOWNLEFT_R|CLICK_R)\\b"
+    },
+    {
+      "name": "support.function.nxc",
+      "match": "\\b(LS|RS)\\(\\s*\\d+\\s*,\\s*[0-1](\\.\\d+)?\\s*\\)"
+    },
+    {
+      "name": "string.quoted.double.nxc",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        { "name": "constant.character.escape.nxc", "match": "\\\\." }
+      ]
+    },
+    {
+      "name": "constant.numeric.nxc",
+      "match": "\\b\\d+(\\.\\d+)?\\b"
+    }
+  ],
+  "scopeName": "source.nxc"
+}

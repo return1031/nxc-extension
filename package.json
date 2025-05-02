@@ -1,0 +1,25 @@
+{
+  "name": "nxc-extension",
+  "displayName": "NXCLang Extension",
+  "description": "Support for NXCLang",
+  "version": "0.0.1",
+  "engines": { "vscode": "^1.85.0" },
+  "categories": ["Programming Languages"],
+  "contributes": {
+    "languages": [
+      {
+        "id": "nxc",
+        "aliases": ["NXCLang", "nxc"],
+        "extensions": [".nxc"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "nxc",
+        "scopeName": "source.nxc",
+        "path": "./syntaxes/nxc.tmLanguage.json"
+      }
+    ]
+  }
+}
